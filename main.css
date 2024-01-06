@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: hsla(194, 78%, 54%, 0.882);
+    padding: 16px 0;
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid hsla(89, 78%, 42%, 0.472);
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #fff;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button {
+    padding: 8px;
+}
+
+button {
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#botao-cancelar {
+    background-color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabela-corpo {
+    cursor: pointer;
+    background-color: hsla(58, 85%, 54%, 0.267);
+}
+
+th, td {
+    border: 1px solid #040202;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #bd289d;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#tabela-corpo tr.completed {
+    text-decoration: line-through;
+    background-color: hsla(125, 80%, 53%, 0.371);
+}
