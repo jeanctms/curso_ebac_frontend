@@ -1,13 +1,14 @@
 $(document).ready(function () {
     $('#telefone').mask('(00) 00000-0000', { placeholder: '(__) _____-____' });
     $('#cpf').mask('000.000.000-00');
+    $('#cep').mask('00000-000');
 
     $('#formularioContato').validate({
         rules: {
             nome: {
                 required: true,
-                minlength: 3, // Exige no mínimo 3 caracteres para o nome
-                nomeCompleto: true // Adiciona a regra personalizada para nome completo
+                minlength: 3,
+                nomeCompleto: true
             },
             email: {
                 required: true,
@@ -16,10 +17,16 @@ $(document).ready(function () {
             telefone: {
                 required: true
             },
-            mensagem: {
-                required: true,
-            },
             cpf: {
+                required: true
+            },
+            endereco: {
+                required: true
+            },
+            cep: {
+                required: true
+            },
+            mensagem: {
                 required: true,
             }
         },
@@ -30,10 +37,7 @@ $(document).ready(function () {
             }
         },
         submitHandler: function (form) {
-            // Aqui você pode adicionar a lógica para enviar o formulário
             console.log('Formulário enviado:', form);
-
-            // Notificação de envio bem-sucedido
             alert('Formulário enviado com sucesso!');
         },
         invalidHandler: function (evento, validador) {
@@ -44,7 +48,6 @@ $(document).ready(function () {
         }
     });
 
-    // Adiciona o método de validação para verificar se o nome é composto
     $.validator.addMethod("nomeCompleto", function (value, element) {
         return this.optional(element) || /^\S.*\s.*\S$/.test(value);
     }, "Por favor, insira o seu nome completo.");
